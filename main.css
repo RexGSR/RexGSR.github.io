@@ -10,12 +10,12 @@
    
 }
 .logo{
-    width: 30vw;
+    width: 25vw;
     height: 20vh;
     background: url('./bg/IMG_1214.JPG');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 30vh;
+    background-size: 30vw 20vh;
     border-radius: 100%;
     position: absolute;
     top: 6%;
