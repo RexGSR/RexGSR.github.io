@@ -1,61 +1,120 @@
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 *{
     margin: 0;
     padding: 0;
+    font-family: Montserrat;
 }
-.nav-container-mobile{
-    width: 100vw;
-    height: 23vh;
+
+
+.navbar{
+   
+    width: 100%;
+    height: 8vh;
+    background: linear-gradient(to right, rgba(58, 214, 253,0.4), rgba(112, 62, 247,0.4));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: 500;
+
+}
+.navbar-logo{
+    margin-left: 20px;
+}
+.nav-links a{
+    text-decoration: none;
+    padding: 10px;
+}
+.nav-links a:hover{
+   border-bottom: 1px solid red;
+   background: rgba(255, 255, 255, 0.2);
+}
+.btn{
+    border: none;
+    outline: none;
+    font-size: 17px;
+    padding: 10px;
+    border-radius: 30px;
     background: #0984e3;
-    position: relative;
+    margin-right: 20px;
+    transition: background 0.5s ease-in-out;
+}
+.btn:hover{
+     background: rgba(9, 132, 227,0.6);
+}
+.div-h{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
    
 }
-.logo{
-    width: 25vw;
-    height: 20vh;
-    background: url('./bg/IMG_1214.JPG');
+.cloud{
+    background: url('./bg/backlit-chiemsee-dawn-1363876.jpg');
+    background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-    background-size: 30vw 20vh;
-    border-radius: 100%;
-    position: absolute;
-    top: 6%;
-    left: 3%;
-    transition: transform 0.5s ease-in-out; 
+    background-attachment: fixed;
+    color: cornsilk;
 }
-.logo:active{
-    transform: scale(2);
-    top: 50%;
-    left: 40%;
+.links{
+    margin-top:40px;
+    display: flex;
+    justify-content: space-between;
 }
-/*mobile-menu-items-starts-here*/
-
-.tabs{
-    position: absolute;
-    right: 20px;
-    height: 23vh;
-    width: 50vw;
+.start h1{
+    font-size: 5rem;
+    text-shadow: 2px 2px 7px rgba(255, 65, 65, 0.5);
 }
-.tabs ul{
-    list-style-type: none;
-    float: right;
+.start p{
+    font-size: 1.5rem;
+    margin: 0 20px;
 }
-.tabs ul li{
-    height: 25px;
-    margin-top: 5px;
-    text-align: center;
-    padding:8px ;
-}
-.tabs a{
-    text-decoration: none;
-    text-transform: uppercase;
+.start a{
     font-size: 1.4rem;
-    color: #fff;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+
 }
-li:hover{
-    border-bottom: 1px solid red;
-    background: rgba(0,0,0,0.1);
+.div-h:nth-child(2){
+    height: 300px;
 }
+.empty-div{
+    background: url('./bg/background-calm-clouds-747964.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.div-g{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+.about h1{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 3rem;;
+    
+}
+.about-info{
+    width: 60vw;
+    height: 40vh;
+}
+.about img{
+    float: left;
+    height: 30vh;
+    width: 30vh;
+    margin: 20px;
+    border: 5px solid rgb(204, 200, 200);
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+    
+}
+.about-info p{
+    font-weight: 500;
+    margin-left:20vw;
+    position: relative;
+    top: 10vh;
+    font-size: 1.5rem;
 
-
-
-/* mobile menu end here*/
+}
