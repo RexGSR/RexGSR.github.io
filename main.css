@@ -10,9 +10,11 @@
    
 }
 .logo{
-    width: 25vw;
+    width: 30vw;
     height: 20vh;
-    background: url('./bg/IMG_1214.JPG') center no-repeat;
+    background: url('./bg/IMG_1214.JPG');
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: 30vh;
     border-radius: 100%;
     position: absolute;
@@ -33,18 +35,25 @@
     height: 23vh;
     width: 50vw;
 }
+.tabs ul{
+    list-style-type: none;
+    float: right;
+}
+.tabs ul li{
+    height: 25px;
+    margin-top: 5px;
+    text-align: center;
+    padding:8px ;
+}
 .tabs a{
     text-decoration: none;
     text-transform: uppercase;
     font-size: 1.4rem;
-    margin-left: 10px;
-    margin-top:30px;
-    height: 30px;
     color: #fff;
-   
 }
-a:hover{
+li:hover{
     border-bottom: 1px solid red;
+    background: rgba(0,0,0,0.1);
 }
 
 
