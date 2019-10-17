@@ -6,6 +6,7 @@
 }
 html{
     overflow: hidden;
+    scroll-behavior: smooth;
 }
 body{
     height: 100vh;
@@ -14,6 +15,7 @@ body{
     transform-style: preserve-3d;
     overflow-x: hidden;
     overflow-y: auto;
+    scroll-behavior: smooth;
 }
 
 .nav-icon {
@@ -68,6 +70,7 @@ body{
 
 }
 .drop-content a:hover{
+    background: rgba(255, 255, 255, 0.1);
     border-bottom: 1px solid rgb(248, 107, 107);
 }
 /*home*/
@@ -180,7 +183,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 40%;
+    width: 75%;
     height: 100%;
     border-radius: 20px;
     background: #00A1A7;
@@ -195,13 +198,13 @@ body{
     width: 70%;
 }
 .js{
-    width: 30%;
+    width: 40%;
 }
 .my{
 width: 50%;
 }
 .wp{
-    width: 30%;
+    width: 40%;
    }
 
 
@@ -221,10 +224,20 @@ footer{
     color: black;
     font-size: 40px;
     margin: 20px;
+    padding:0 2px;
+    border-radius:100% ;
+    transition: shadow 0.4s ease-in-out;
+}
+.links a:hover{
+    color: rgb(255, 255, 255);
+    box-shadow: 0 0 30px rgb(255, 255, 255);
 }
 
 /*responsiveness-media-queries*/
 @media screen  and  (max-width:600px){
+    .drop-content{
+        left: 13vw;
+    }
    
     .about{
         padding-top:0;
