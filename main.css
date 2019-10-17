@@ -4,116 +4,247 @@
     padding: 0;
     font-family: Montserrat;
 }
-
-
-.navbar{
-   
-    width: 100%;
-    height: 8vh;
-    background: linear-gradient(to right, rgba(58, 214, 253,0.4), rgba(112, 62, 247,0.4));
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-transform: uppercase;
-    font-weight: 500;
-
+html{
+    overflow: hidden;
 }
-.navbar-logo{
-    margin-left: 20px;
-}
-.nav-links a{
-    text-decoration: none;
-    padding: 10px;
-}
-.nav-links a:hover{
-   border-bottom: 1px solid red;
-   background: rgba(255, 255, 255, 0.2);
-}
-.btn{
-    border: none;
-    outline: none;
-    font-size: 17px;
-    padding: 10px;
-    border-radius: 30px;
-    background: #0984e3;
-    margin-right: 20px;
-    transition: background 0.5s ease-in-out;
-}
-.btn:hover{
-     background: rgba(9, 132, 227,0.6);
-}
-.div-h{
+body{
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   
+    background: rgb(17,31,34);
+    perspective: 1px;
+    transform-style: preserve-3d;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
-.cloud{
-    background: url('./bg/backlit-chiemsee-dawn-1363876.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    color: cornsilk;
+
+.nav-icon {
+    width: 40px;
+    position: relative;
+    top: 30px;
+    left: 30px;
+    z-index: 4;
 }
-.links{
-    margin-top:40px;
-    display: flex;
-    justify-content: space-between;
+      
+.nav-icon:after, 
+.nav-icon:before, 
+.nav-icon .bar {
+    background-color: #fff;
+    border-radius: 3px;
+    content: '';
+    display: block;
+    height: 5px;
+    margin: 7px 0;
+    transition: all .2s ease-in-out;
 }
-.start h1{
-    font-size: 5rem;
-    text-shadow: 2px 2px 7px rgba(255, 65, 65, 0.5);
+.nav-icon:hover:before {
+    transform: translateY(12px) rotate(135deg);
+  }
+  
+  .nav-icon:hover:after {
+    transform: translateY(-12px) rotate(-135deg);
+  }
+  
+  .nav-icon:hover .bar {
+    transform: scale(0);
+  }
+  .nav-icon:hover .drop-content{
+        display: flex;
+        justify-content: space-around;
+  }
+.drop-content{
+    position: absolute;
+    top: 10%;
+    left: 0;
+    height: 10vh;
+    width: 40vw;
+    display: none;
+    
 }
-.start p{
-    font-size: 1.5rem;
-    margin: 0 20px;
-}
-.start a{
+.drop-content a{
+    text-decoration: none;
+    color: azure;
     font-size: 1.4rem;
-    text-decoration: none;
-    color: rgb(0, 0, 0);
+    padding: 20px;
+    
 
 }
-.div-h:nth-child(2){
-    height: 300px;
+.drop-content a:hover{
+    border-bottom: 1px solid rgb(248, 107, 107);
 }
-.empty-div{
-    background: url('./bg/background-calm-clouds-747964.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
-.div-g{
+/*home*/
+.cloud{
+    width: 100vw;
     height: 100vh;
+   
+    padding-top: 20vh;
+    box-sizing: border-box;
+    transform-style: preserve-3d;
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+.cloud::before{
+    content: "";
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url('./bg/bg-dark.jpg');
+    background-size: cover;
+    background-position: center center;
+    z-index: -1;
+    transform: translateZ(-1px) scale(2);
+
+}
+.intro{
+    color: rgb(231,230,223);
+    max-width: 500px;
+    height: 200px;
+    font-size: 1.5rem;
+    font-weight: 200;
+    transform: translate(-50% -50%);
+}
+
+
+/*about-section*/
+.about{
+    width: 100vw;
+    height: 100vh;
+    padding-top:10vh;
+    position: relative;
+    /*background: linear-gradient(to bottom right, rgb(36, 149, 255, 0.4),rgb(190, 77, 255, 0.4));*/
+    background: white;
+    background-size: cover;
+   
+    
 }
 .about h1{
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 3rem;;
+    display:inline-block;
+    font-size: 2.5rem;
+    padding:20px;
+    border-bottom: 1px solid black;
+    margin-bottom: 100px;
     
+}
+.wrapper{
+    display: flex;
+    justify-content: space-around;
+}
+/*intro-card*/
+.about-info h1{
+    font-size: 1.5rem;
+    margin-bottom:2vh;
+   
 }
 .about-info{
-    width: 60vw;
-    height: 40vh;
-}
-.about img{
+    max-width: 300px;
+    height: auto;
+    background: white;
+    box-shadow:4px 4px 10px rgba(0,0,0,0.5);
+    border-radius: 20px 20px 0 0;
     float: left;
-    height: 30vh;
-    width: 30vh;
-    margin: 20px;
-    border: 5px solid rgb(204, 200, 200);
-    border-radius: 20px;
-    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
-    
+    margin-left: 20vw;
+
+ }
+.about-info img{
+    height: 200px;
+    width: 300px;
+    border-radius: 20px 20px 0 0;
+
+  
 }
 .about-info p{
-    font-weight: 500;
-    margin-left:20vw;
-    position: relative;
-    top: 10vh;
-    font-size: 1.5rem;
+    margin:20px 0;
+    font-size: 1.3rem;
+    max-width: 400px;
+    padding-left: 5px;
 
 }
+/*skills-section*/
+.skills{
+    width: 600px;
+    height: 40vh;
+    padding: 2vh;
+    
+
+}
+.skills .bar{
+    margin: 10px;
+    width: 90%;
+    height: 4vh;
+    border-radius: 20px;
+    background: rgb(204, 203, 203);
+}
+/*progress-bar's  progress*/
+.filler{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+    height: 100%;
+    border-radius: 20px;
+    background: #00A1A7;
+
+}
+.filler p{
+    margin-left: 10px;
+    padding: 3px;
+}
+/*for-different-level-of-progress*/
+.c{
+    width: 70%;
+}
+.js{
+    width: 30%;
+}
+.my{
+width: 50%;
+}
+.wp{
+    width: 30%;
+   }
+
+
+
+/*footer*/
+
+footer{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.links a{
+    color: black;
+    font-size: 40px;
+    margin: 20px;
+}
+
+/*responsiveness-media-queries*/
+@media screen  and  (max-width:600px){
+   
+    .about{
+        padding-top:0;
+        height: 150vh;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .about h1{
+        padding:10px;
+        margin-bottom: 20px;
+        
+    }
+    .wrapper{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .skills{
+        width: 100%;
+        height: auto;
+        padding: 2vh;
+    }
+} 
