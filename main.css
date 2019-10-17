@@ -71,7 +71,22 @@ body{
 }
 .drop-content a:hover{
     background: rgba(255, 255, 255, 0.1);
-    border-bottom: 1px solid rgb(248, 107, 107);
+    animation: please 0.5s ease-in-out;
+    animation-fill-mode: forwards;
+}
+@keyframes please{
+    0%{
+        border-top:1px solid red;
+    }
+    25%{
+        border-right:1px solid red;
+    }
+    50%{
+        border-bottom:1px solid red;
+    }
+    100%{
+        border-left:1px solid red;
+    }
 }
 /*home*/
 .cloud{
@@ -106,8 +121,34 @@ body{
     font-size: 1.5rem;
     font-weight: 200;
     transform: translate(-50% -50%);
+    position: relative;
 }
+.intro h1::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 1%;
+    width: 0%;
+    background: red;
+    animation: fill-mode 2s linear ; 
+}
+@keyframes fill-mode{
+    10%{
+        width:20%;
+    }
+    40%{
+        width:40%;
+    }
+    70%{
+        width:60%;
+        background: green;
+    }
+    100%{
+        width: 100%;
+        background: crimson;
 
+    }
+}
 
 /*about-section*/
 .about{
@@ -187,8 +228,40 @@ body{
     height: 100%;
     border-radius: 20px;
     background: #00A1A7;
+    
 
 }
+.bar:hover .filler{
+    animation: filler 2s linear;
+}
+@keyframes filler{
+    0%{
+        background: #00A1A7;
+        width:20%;
+        opacity: 0.2;
+    }
+    25%{
+        background: #00A1A7;
+        width:40%;
+        opacity: 0.4;
+    }
+    50%{
+        background: #00A1A7;
+        width:60%;
+        opacity: 0.6;
+    }
+    80%{
+        background: #00A1A7;
+        width:80%;
+        opacity: 0.8;
+    }
+    100%{
+        background: #00A1A7;
+        width:100%;
+        opacity: 1;
+    }
+}
+
 .filler p{
     margin-left: 10px;
     padding: 3px;
@@ -226,7 +299,7 @@ footer{
     margin: 20px;
     padding:0 2px;
     border-radius:100% ;
-    transition: shadow 0.4s ease-in-out;
+    transition: color 0.4s ease-in-out;
 }
 .links a:hover{
     color: rgb(255, 255, 255);
