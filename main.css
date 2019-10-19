@@ -325,10 +325,12 @@ footer{
         
     }
     .wrapper{
+        padding-top:5vh ;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding-bottom: 5vh;
         
     }
     .skills{
