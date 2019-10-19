@@ -115,7 +115,7 @@ body{
 
 }
 .intro{
-    color: rgb(231,230,223);
+    color: rgb(255, 255, 255);
     max-width: 500px;
     height: 200px;
     font-size: 1.5rem;
@@ -154,25 +154,25 @@ body{
 .about{
     width: 100vw;
     height: 100vh;
-    padding-top:10vh;
+    padding-top:5vh;
     position: relative;
-    /*background: linear-gradient(to bottom right, rgb(36, 149, 255, 0.4),rgb(190, 77, 255, 0.4));*/
-    background: white;
+    background: linear-gradient(to  bottom  right,rgb(193, 99, 247),rgb(250, 185, 185));
     background-size: cover;
-   
+    
     
 }
 .about h1{
     display:inline-block;
     font-size: 2.5rem;
-    padding:20px;
+    padding:15px;
     border-bottom: 1px solid black;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     
 }
 .wrapper{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly ;
+    
 }
 /*intro-card*/
 .about-info h1{
@@ -186,8 +186,7 @@ body{
     background: white;
     box-shadow:4px 4px 10px rgba(0,0,0,0.5);
     border-radius: 20px 20px 0 0;
-    float: left;
-    margin-left: 20vw;
+
 
  }
 .about-info img{
@@ -227,7 +226,7 @@ body{
     width: 75%;
     height: 100%;
     border-radius: 20px;
-    background: #00A1A7;
+    background: rgba(231, 0, 69,0.8);
     
 
 }
@@ -309,15 +308,16 @@ footer{
 /*responsiveness-media-queries*/
 @media screen  and  (max-width:600px){
     .drop-content{
-        left: 13vw;
+        top:-2vh;
+        left: 10vw;
+        width:80vw;
+        
     }
    
     .about{
         padding-top:0;
-        height: 150vh;
-        display:flex;
-        flex-direction: column;
-        justify-content: center;
+        height: 120vh;
+      
     }
     .about h1{
         padding:10px;
@@ -325,8 +325,11 @@ footer{
         
     }
     .wrapper{
+        display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
+        
     }
     .skills{
         width: 100%;
