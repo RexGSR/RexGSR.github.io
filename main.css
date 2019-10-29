@@ -92,13 +92,46 @@ body{
 .cloud{
     width: 100vw;
     height: 100vh;
-   
     padding-top: 20vh;
     box-sizing: border-box;
     transform-style: preserve-3d;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.link{
+    position: relative;
+    left: 0;
+    bottom:-50px;
+    margin-right: 20px;
+    transform-style: preserve-3d;
+    height: 40px;
+    width: 40px;
+    animation: btn  0.8s ease-in-out infinite;
+}
+@keyframes  btn{
+    0%{
+        bottom: -50px;
+    }
+    25%{
+        bottom: -52px;
+    }
+    100%{
+        bottom: -55px;
+    }
+   
+}
+
+.link a{
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    font-size: 2.6rem;
+    text-decoration: none;
+    color: white;
+    border: 1px solid   white;
+    border-radius: 20px;
 }
 .cloud::before{
     content: "";
@@ -156,8 +189,9 @@ body{
     height: 100vh;
     padding-top:5vh;
     position: relative;
-    background: linear-gradient(to  bottom  right,rgb(193, 99, 247),rgb(250, 185, 185));
+    background: linear-gradient(to  bottom right, rgb(188, 73, 255),rgb(0, 132, 255)  ) ;
     background-size: cover;
+    border-bottom: 1px  solid   black;
     
     
 }
@@ -206,10 +240,21 @@ body{
 /*skills-section*/
 .skills{
     width: 600px;
-    height: 40vh;
+    height: auto;
     padding: 2vh;
     
 
+}
+.skills dd{
+    margin-left: 10px;
+    width: 500px;
+}
+.skills ul{
+    margin-left: 20px;
+}
+.skills h2{
+    padding-left: 12px;
+    background: rgb(107, 107, 107);
 }
 .skills .bar{
     margin: 10px;
@@ -278,9 +323,78 @@ width: 50%;
 .wp{
     width: 40%;
    }
+.services{
+    height: auto;
+    width: 100vw;
+    background: rgb(194, 193, 192);
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 4vh;
+}
+.services   h1{
+    align-self: center;
+    font-size: 2rem;
+    padding: 10px;
+    border-bottom: 1px  solid   black;
+    text-transform: uppercase;
+}
+.container{
+    align-self: center;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5vh;
+    width: 80vw;
+    height: auto;
+    
 
+}
+.pro{
+    width: 300px;
+    height: 200px;
+    background: white;
+    padding: 10px;
+    border-radius: 0px  50px 0px 50px;
+    box-shadow:5px 5px 20px rgba(0,0,0,0.5);
+}
+.pro h2{
+    margin-bottom: 20px;
+    border-bottom: 1px  solid   black;
+}
+.pro:hover{
+   background: rgb(63, 63, 63);
+   color: white;
+}
+.contact{
+    width: 100vw;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(153, 153, 153);
+}
+.contact h1{
+    padding: 10px;
+    border-bottom: 1px  solid   black;
 
-
+}   
+.contact-wrapper{
+    display: flex;
+    width: 50%;
+    justify-content: space-evenly;
+    margin: 30px;
+}
+.links a{
+    color: black;
+    font-size: 40px;
+    margin: 20px;
+    padding:0 2px;
+}
+.links a:hover  i{
+    transition: color,transform 0.5s ease-in-out;
+    color: rgb(0, 0, 0);
+    transform: scale(1.5);
+}
 /*footer*/
 
 footer{
@@ -289,24 +403,13 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
+    background: rgb(92, 91, 91);
+    color: white;
    
 }
 
-.links a{
-    color: black;
-    font-size: 40px;
-    margin: 20px;
-    padding:0 2px;
-    border-radius:100% ;
-    transition: color 0.4s ease-in-out;
-}
-.links a:hover{
-    color: rgb(255, 255, 255);
-    box-shadow: 0 0 30px rgb(255, 255, 255);
-}
-
 /*responsiveness-media-queries*/
-@media screen  and  (max-width:600px){
+@media screen  and  (max-width:1000px){
     .drop-content{
         top:-2vh;
         left: 10vw;
@@ -316,7 +419,7 @@ footer{
    
     .about{
         padding-top:0;
-        height: 145vh;
+        height: auto;
       
     }
     .about h1{
@@ -328,14 +431,31 @@ footer{
         padding-top:5vh ;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-evenly;
         align-items: center;
         padding-bottom: 5vh;
         
     }
     .skills{
+        margin-top:10vh;
         width: 100%;
         height: auto;
         padding: 2vh;
     }
+    .container{
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    .services{
+        background: linear-gradient(to bottom right, rgb(11, 255, 141),#390dff);
+    }
+    .pro{
+        margin: 20px auto;
+        background: linear-gradient(to bottom right, rgba(31, 255, 117,0.4),rgba(178, 44, 255,0.4));
+    }
+    .contact-wrapper{
+        width: 100%;
+    }
 } 
+  
