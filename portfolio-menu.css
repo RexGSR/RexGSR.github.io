@@ -168,9 +168,9 @@
 }
 
 @media screen  and  (max-width:600px){
-.menu > div > div ul li{
-    font-size: 0.8rem;
-    padding: 0.8rem;
-}
+    .menu > div > div ul li{
+        font-size: 0.8rem;
+        padding: 0.8rem;
+    }
 
 }
